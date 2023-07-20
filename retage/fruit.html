@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 200px;
+    border: 3px solid #16a93f;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    max-height: 150px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cart {
+    border: 3px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart li {
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    background-color: #2eea38;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    height: 50px;
+}
+
+.navigation {
+    flex: 1;
+    text-align: center;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navigation li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px; /* Increase the padding to add more space around the links */
+    font-size: 18px; /* Increase the font size */
+}
+
+.navigation li a:hover {
+    background-color: #eb77e7;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #30cc6e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(248, 245, 245); 
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #5f71f7;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #4c5ceb;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-actions {
+    margin-left: 20px;
+}
+
+.user-actions a {
+    color: #f9f5f8;
+    text-decoration: none;
+    padding: 8px 15px; /* Increase the padding to add more space around the links */
+    font-size: 18px; /* Increase the font size */
+}
+
+.user-actions a:hover {
+    background-color: #e299e4;
+}
+
+   </style>
+</head>
+<header class="header">
+    <div class="logo">
+        <img src="C:\Users\leena\Downloads\retage_logo-removebg-preview.png" alt="Logo">
+    </div>
+    <nav class="navigation">
+        <ul>
+            <li><a href="frontpage.html">Home</a></li>
+            
+            <li class="dropdown">
+                <a href="#">Products</a>
+                <div class="dropdown-content">
+                    <a href="fruit.html">Fruits</a>
+                    <a href="veg.html">Vegetables</a>
+                    <a href="dairy.html">Dairy Products</a>
+                </div>
+            </li>
+            <li><a href="file:///C:/Users/leena/Downloads/retage/contactpage.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="user-actions">
+        <a href="#">Cart</a>
+        <a href="file:///C:/Users/leena/Downloads/retage/userprofile.html">Profile</a>
+        <a href="login.html">Logout</a>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <h1>Fruits</h1>
+        <div class="products">
+            <div class="product">
+                <img src="apple.png" alt="Product 1">
+                <h3>APPLE</h3>
+                <p>Price: 50/kg</p>
+                <button class="add-to-cart" onclick="addToCart('APPLE', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="mango.png" alt="Product 2">
+                <h3>MANGO</h3>
+                <p>Price: 100/kg</p>
+                <button class="add-to-cart" onclick="addToCart('MANGO', 100)">Add to Cart</button>
+            </div>
+            
+            
+            <div class="product">
+                <img src="kiwi.png" alt="Product 2">
+                <h3>KIWI</h3>
+                <p>Price: 80/kg</p>
+                <button class="add-to-cart" onclick="addToCart('KIWI', 80)">Add to Cart</button>
+            </div>
+            
+            <div class="product">
+                <img src="straw.png" alt="Product 2">
+                <h3>STRAWBERRY</h3>
+                <p>Price: 80/kg</p>
+                <button class="add-to-cart" onclick="addToCart('STRAWBERRY', 80)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="drag.png" alt="Product 2">
+                <h3>DRAGON FRUIT</h3>
+                <p>Price: 180/piece</p>
+                <button class="add-to-cart" onclick="addToCart('DRAGON FRUIT', 180)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="pine.png" alt="Product 2">
+                <h3>PINEAPPLE</h3>
+                <p>Price: 60/piece</p>
+                <button class="add-to-cart" onclick="addToCart('PINEAPPLE', 60)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="orange.png" alt="Product 2">
+                <h3>ORANGE</h3>
+                <p>Price: 90/piece</p>
+                <button class="add-to-cart" onclick="addToCart('ORANGE', 90)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="guava.png" alt="Product 2">
+                <h3>GUAVA</h3>
+                <p>Price: 60/piece</p>
+                <button class="add-to-cart" onclick="addToCart('GUAVA', 60)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="water.png" alt="Product 2">
+                <h3>WATERMELON</h3>
+                <p>Price: 60/piece</p>
+                <button class="add-to-cart" onclick="addToCart('WATERMELON', 60)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="cherry.png" alt="Product 2">
+                <h3>CHEERY</h3>
+                <p>Price: 50/piece</p>
+                <button class="add-to-cart" onclick="addToCart('CHERRY', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="PEAR.png" alt="Product 2">
+                <h3>PEAR</h3>
+                <p>Price: 70/piece</p>
+                <button class="add-to-cart" onclick="addToCart('PEAR', 70)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="AVA.png" alt="Product 2">
+                <h3>AVACADO</h3>
+                <p>Price: 200/piece</p>
+                <button class="add-to-cart" onclick="addToCart('AVACADO', 200)">Add to Cart</button>
+            </div>
+            
+
+            <!-- Add more product items here -->
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here dynamically using JavaScript -->
+            </ul><a href="payment.html">
+            <button class="buy-button" >Buy</button>
+        </a>
+        </div>
+    </div>
+
+    <script>
+      const cartItems = [];
+
+function addToCart(productName, price) {
+    cartItems.push({ name: productName, price: price });
+    updateCart();
+}
+
+function updateCart() {
+    const cartItemsList = document.getElementById('cart-items');
+    cartItemsList.innerHTML = '';
+
+    cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ${item.price}Rs`;
+        cartItemsList.appendChild(li);
+    });
+}
+
+
+  
+    </script>
+</body>
+</html>
+

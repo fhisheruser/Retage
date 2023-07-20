@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+   <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 200px;
+    border: 3px solid #16a93f;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    max-height: 150px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cart {
+    border: 3px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart li {
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    background-color: #2eea38;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    height: 50px;
+}
+
+.navigation {
+    flex: 1;
+    text-align: center;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navigation li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px; /* Increase the padding to add more space around the links */
+    font-size: 18px; /* Increase the font size */
+}
+
+.navigation li a:hover {
+    background-color: #eb77e7;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #30cc6e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(248, 245, 245); 
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #5f71f7;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #4c5ceb;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-actions {
+    margin-left: 20px;
+}
+
+.user-actions a {
+    color: #f9f5f8;
+    text-decoration: none;
+    padding: 8px 15px; /* Increase the padding to add more space around the links */
+    font-size: 18px; /* Increase the font size */
+}
+
+.user-actions a:hover {
+    background-color: #e299e4;
+}
+
+   </style>
+</head>
+<header class="header">
+    <div class="logo">
+        <img src="C:\Users\leena\Downloads\retage_logo-removebg-preview.png" alt="Logo">
+    </div>
+    <nav class="navigation">
+        <ul>
+            <li><a href="frontpage.html">Home</a></li>
+           
+            <li class="dropdown">
+                <a href="#">Products</a>
+                <div class="dropdown-content">
+                    <a href="fruit.html">Fruits</a>
+                    <a href="veg.html">Vegetables</a>
+                    <a href="dairy.html">Dairy Products</a>
+                </div>
+            </li>
+            <li><a href="file:///C:/Users/leena/Downloads/retage/contactpage.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="user-actions">
+        <a href="#">Cart</a>
+        <a href="file:///C:/Users/leena/Downloads/retage/userprofile.html">Profile</a>
+        <a href="login.html">Logout</a>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <h1>Vegetables</h1>
+        <div class="products">
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ6ltIkPGX4g3x20JpjBVQq_jR7-2vrO-l_w&usqp=CAU" alt="Product 1">
+                <h3>Ladyfinger</h3>
+                <p>Price: 50/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Ladyfinger', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsyszoI8Lf9wnYQ_kvw_OwIjT7G42MAJOiDw&usqp=CAU" alt="Product 2">
+                <h3>Broccoli</h3>
+                <p>Price: 100</p>
+                <button class="add-to-cart" onclick="addToCart('Broccoli', 100)">Add to Cart</button>
+            </div>
+            
+            
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJrebELQmyzSIBTBYdqU0673_x-0uqnXfnw&usqp=CAU" alt="Product 2">
+                <h3>Cauliflower</h3>
+                <p>Price: 40</p>
+                <button class="add-to-cart" onclick="addToCart('Cauliflower', 40)">Add to Cart</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-jvKRUK3Wc9jkaa3UWIzCwPg4_gaDSyzk9A&usqp=CAU" alt="Product 2">
+                <h3>Tomato</h3>
+                <p>Price: 120/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Tomato', 120)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7_fb2XI3AwrOxqRgtKJ23tazoezJp6HIJHQ&usqp=CAU" alt="Product 2">
+                <h3>Brinjal</h3>
+                <p>Price: 50/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Brinjal', 50)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo5oKmRTaflQpCozsjlFP65QHFN7bZWYx-sQ&usqp=CAU" alt="Product 2">
+                <h3>Radish</h3>
+                <p>Price: 60/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Radish', 60)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLT3F8absP0PmOktnHJ4_T7Bc33MZt24jTBw&usqp=CAU" alt="Product 2">
+                <h3>Carrot</h3>
+                <p>Price: 40/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Carrot', 40)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7pGId3BRbf9IPtT32ubU-4fjx5LDZ9nA5Q8EM85KuvfKDs9Su44WrRslqfaRq7EoY0M&usqp=CAU" alt="Product 2">
+                <h3>Capsicum</h3>
+                <p>Price: 30/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Capsicum', 30)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqEbpicNfSCYpy0b6zkgo11J2tW9S2vNkWSg&usqp=CAU" alt="Product 2">
+                <h3>Potato</h3>
+                <p>Price: 30/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Potato', 30)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqYwEhUaw3HMiYhTG80E8Uhe1BL4MbrugN5w&usqp=CAU" alt="Product 2">
+                <h3>Bitterguard</h3>
+                <p>Price: 40/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Bitterguard', 40)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UZSg3IlJVOQ4KA2M0EE1E5eKz8UqD4lrpkonKFDXLDGQZSbA50Q4Bw1qZZQuLmCHnFc&usqp=CAU" alt="Product 2">
+                <h3>Cabbage</h3>
+                <p>Price: 45/piece</p>
+                <button class="add-to-cart" onclick="addToCart('Cabbage',45)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuMFuvhPntIM6aZN5W2c_t6LjL65qqYp28EyE7Oi5OBUX4kTUvzxpgNvAlMBJnwAapS4U&usqp=CAU" alt="Product 2">
+                <h3>Lattuce</h3>
+                <p>Price: 20/piece</p>
+                <button class="add-to-cart" onclick="addToCart('Lattuce', 20)">Add to Cart</button>
+            </div>
+            
+
+            <!-- Add more product items here -->
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be added here dynamically using JavaScript -->
+            </ul>
+            <a href="payment.html">
+                <button class="buy-button" >Buy</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+      const cartItems = [];
+
+function addToCart(productName, price) {
+    cartItems.push({ name: productName, price: price });
+    updateCart();
+}
+
+function updateCart() {
+    const cartItemsList = document.getElementById('cart-items');
+    cartItemsList.innerHTML = '';
+
+    cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - ${item.price}Rs`;
+        cartItemsList.appendChild(li);
+    });
+}
+
+function buy() {
+    alert('Thank you for your purchase!');
+    cartItems.length = 0;
+    updateCart();
+}
+  
+    </script>
+</body>
+</html>
+

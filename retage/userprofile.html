@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+
+#viewImg {
+  border: 3px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+/* Profile Setting section styles */
+.form-label {
+  font-weight: bold;
+}
+.back-button-link {
+            display: inline-block;
+            position: absolute; /* Position the back button absolutely */
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed */
+        
+           
+        }
+
+        .back-button-image {
+            width: 50px;
+            height: 50px;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="icon" href="resource/logo.svg">
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Place your header content here (e.g., navigation bar, logo, etc.) -->
+            <!-- The PHP code section for database queries and user information goes here (omitted in HTML) -->
+            <div class="col-12 bg-primary">
+                <div class="row">
+                    <div class="col-12 bg-body rounded mt-4 mb-4">
+                        <div class="row g-2 ms-2 me-2">
+                            <div class="col-md-3 border-end">
+                                <div class="d-flex flex-column align-items-center p-3 py-5">
+                                    <img src="resource/new_user.svg" class="rounded mt-5" style="width: 150px;" id="viewImg">
+                                    <span class="fw-bold" id="profileName">John Doe</span>
+
+                                    <!-- Inside the <div class="d-flex flex-column align-items-center p-3 py-5"> -->
+                                    <span class="fw-bold text-black-50" id="emailDisplay">john.doe@example.com</span>
+
+                                    <input type="file" class="d-none" id="profileimg" accept="image/*">
+                                    <label for="profileimg" class="btn btn-primary mt-5" onclick="changeImage();">Update Profile</label>
+                                </div>
+                            </div>
+                            <div class="col-md-5 border-end">
+                                <div class="p-3 py-5">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h4 class="fw-bold">Profile Setting</h4>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-6">
+                                            <label class="form-label">First Name</label>
+                                            <input type="text" class="form-control" value="John" id="fname">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" value="Doe" id="lname">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Mobile</label>
+                                            <input type="text" class="form-control" value="1234567890" id="mobile">
+                                        </div>
+                                        <!-- Inside the <div class="col-12"> -->
+<!-- <div class="col-12">
+    <label class="form-label">Password</label>
+    <div class="input-group">
+        <input type="password" class="form-control" value="********" id="password">
+        <!-- Add the button to toggle password visibility -->
+        <!--<button class="btn btn-outline-secondary" type="button" id="togglePassword" onclick="togglePasswordVisibility()">
+            <i class="bi bi-eye"></i>
+        </button>
+    </div>
+</div> -->
+
+                                        <div class="col-12">
+                                            <label class="form-label">Email</label>
+                                            <input type="text" class="form-control" value="john.doe@example.com" id="email">
+                                        </div>
+                                      
+                                        <div class="col-12">
+                                            <label class="form-label">Delivery Address</label>
+                                            <input type="text" class="form-control" value="123 Main St" id="line1">
+                                        </div>
+                                        <!-- <div class="col-12">
+                                            <label class="form-label">LOCATION PREFERED</label>
+                                            <input type="text" class="form-control" id="line2">
+                                        </div> -->
+                                        <!-- Replace the <div class="col-6"> containing the "Province" input field with the "College Name" input field -->
+<!-- <div class="col-12">
+    <label class="form-label">College Name</label>
+    <input type="text" class="form-control" value="Your College" id="college">
+</div> -->
+
+                                       
+                                        
+                                        <!-- Inside the <div class="col-12"> -->
+<!-- <div class="col-6">
+    <label class="form-label">Gender</label>
+    <input type="text" class="form-control" value="Male" id="gender">
+</div> -->
+<a href="frontpage.html" class="back-button-link">
+    <img src="backbutton.png" alt="Back to Main Page" class="back-button-image">
+</a>
+
+                                        <div class="col-12 d-grid mt-3">
+                                            <button type="submit" class="btn btn-primary" onclick="updateProfileAndRedirect();">Update My Profile</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Place your footer content here -->
+        </div>
+    </div>
+    <script src="bootstrap.bundle.js"></script>
+  <!-- Add the following script at the end of the HTML body, just before the closing </body> tag -->
+  <script>
+    // ... (Other parts of the existing JavaScript code)
+    // function updateProfileAndRedirect() {
+    //     // Call the updateProfile function to update the profile information
+    //     updateProfile();
+
+    //     // Redirect to the updated_profile.html page
+    //     window.location.href = 'UPDATES.html';
+    // }
+    // Function to handle changing the profile image
+    function changeImage() {
+        const fileInput = document.getElementById('profileimg');
+        const viewImg = document.getElementById('viewImg');
+        const profileImgDisplay = document.getElementById('profileImgDisplay'); // Get the img element for displaying the selected image
+
+        fileInput.onchange = function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    viewImg.src = reader.result;
+                    profileImgDisplay.src = reader.result; // Display the selected image
+                };
+                reader.readAsDataURL(file);
+            }
+        };
+
+        // Trigger the file input click event
+        fileInput.click();
+    }
+    // function togglePasswordVisibility() {
+    //     const passwordInput = document.getElementById('password');
+    //     const togglePasswordButton = document.getElementById('togglePassword');
+
+    //     if (passwordInput.type === 'password') {
+    //         // If the password is currently masked, show it as plaintext
+    //         passwordInput.type = 'text';
+    //         togglePasswordButton.innerHTML = '<i class="bi bi-eye-slash"></i>';
+    //     } else {
+    //         // If the password is currently shown as plaintext, mask it with asterisks
+    //         passwordInput.type = 'password';
+    //         togglePasswordButton.innerHTML = '<i class="bi bi-eye"></i>';
+    //     }
+    // }
+    function updateProfile() {
+        // Get input values
+        const firstName = document.getElementById('fname').value;
+        const lastName = document.getElementById('lname').value;
+        const mobile = document.getElementById('mobile').value;
+        // const password = document.getElementById('password').value;
+        const email = document.getElementById('email').value;
+        const addressLine1 = document.getElementById('line1').value;
+        const addressLine2 = document.getElementById('line2').value;
+        
+        // const gender = document.getElementById('gender').value;
+        // const college = document.getElementById('college').value;
+
+        // Update the profile information in the HTML elements
+        // document.getElementById('fname').value = firstName;
+        // document.getElementById('lname').value = lastName;
+        document.getElementById('mobile').value = mobile;
+        document.getElementById('email').value = email;
+        // document.getElementById('password').value = password;
+        document.getElementById('line1').value = addressLine1;
+        document.getElementById('line2').value = addressLine2;
+        // document.getElementById('college').value = college;
+
+        // For demonstration purposes, we'll also update the profile name, email, and gender in the HTML
+        const profileName = `${firstName} ${lastName}`;
+        document.getElementById('profileName').textContent = profileName;
+
+        // Update the email in the HTML span
+        document.getElementById('emailDisplay').textContent = email;
+
+        // Update the gender in the input field
+        // document.getElementById('gender').value = gender;
+        // document.getElementById('collegeDisplay').textContent = college;
+        // window.location.href = 'UPDATES.html';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="leena"],
+        input[type="katkar"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .btn.signup-btn {
+            margin-left: 4%;
+            margin-top: 5px;
+            align-items: center;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        h4{
+            text-align: center;
+        }
+        .btn-anchor {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="#" onsubmit="return checkCredentials()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!-- Wrap the "Login" button with an anchor tag -->
+            <a href="frontpage.html" class="btn-anchor">
+                <input type="submit" value="Login" class="btn login-btn">
+            </a>
+            <!-- End of the anchor tag -->
+            <h4>Dont have an Account? Signup</h4>
+            <button type="button" class="btn signup-btn" onclick="location.href='signup.html';">Sign Up</button>
+            <div class="error-message" id="error-message"></div>
+        </form>
+    </div>
+
+    <script>
+        function checkCredentials() {
+            // Get the values entered by the user
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // You can add your authentication logic here.
+            // For demonstration purposes, we'll assume the correct username is 'user123' and password is 'password123'
+            if (username === 'leena' && password === 'katkar') {
+                // If the credentials are correct, redirect to the frontpage.html
+                window.location.href = 'frontpage.html';
+                return false; // Prevent form submission since we're manually redirecting
+            } else {
+                // Display an error message if the credentials are incorrect
+                document.getElementById('error-message').textContent = 'Invalid username or password.';
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
